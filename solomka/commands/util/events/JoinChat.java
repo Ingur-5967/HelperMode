@@ -20,7 +20,7 @@ import static ru.solomka.config.ConfigManager.getStringList;
 
 public class JoinChat implements Listener {
 
-    private final Main plugin;
+    @Getter private final Main plugin;
 
     public JoinChat(Main plugin) {
         this.plugin = plugin;
@@ -51,8 +51,5 @@ public class JoinChat implements Listener {
         for(UUID player_chat : join) {
             getPlayer(player_chat).sendMessage(translateAlternateColorCodes('&', getString("ChatPrefix") + " " + p.getName() + " &7→&f " + message));
         }
-    }
-    public Main getPlugin() {
-        return plugin;
     }
 }
