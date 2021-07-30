@@ -41,7 +41,7 @@ public class HandlerRequests {
         }
     }
 
-    public void getRequest(Connection connection, String selected, String db, String name, RequestsType requests) throws SQLException {
+      public void getRequest(Connection connection, String selected, String db, String name, RequestsType requests) throws SQLException {
         String get = "SELECT " + selected + " FROM " + db + " WHERE name = '" + name + "'";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(get);
@@ -61,7 +61,7 @@ public class HandlerRequests {
                 statement.close();
             }
             case ALL : {
-                String all = "SELECT * FROM " + db + " WHERE helper = true";
+                String all = "SELECT " + selected + " FROM " + db + " WHERE helper = true";
                 Statement statementAll = connection.createStatement();
                 ResultSet rsAll = statementAll.executeQuery(all);
                 for(int i = 0; i < rsAll.findColumn("name"); i++) {
