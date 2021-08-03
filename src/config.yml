@@ -1,0 +1,48 @@
+Message:
+    Help:
+        commands:
+            - ""
+            - "&6&l| КОМАНДЫ ДЛЯ ИГРОКОВ | "
+            - " "
+            - "&a[>>] &f/question <message> (Подать вопрос хелперам) "
+            - " "
+            - "&с&l| КОМАНДЫ ДЛЯ ХЕЛПЕРОВ/АДМИНИСТРАТОРОВ | "
+            - " "
+            - "&a[>>] &f/answer <player> <message> (Отправить ответ игроку)"
+            - "&a[>>] &f/blacklist <player> <add/remove> <reason> (Добавить/Удалить игрока из чс хелперов)"
+            - "&a[>>] &f/hcheck <player> (Показывает статистику хелпера)"
+            - "&a[>>] &f/achat <message> (Отправить сообщение в чат хелперов)"
+            - "&a[>>] &f/hmute <player> <second> <reason> (Замутить игрока на время)"
+            - "&a[>>] &f/hrank <name> <rank (0,1,2,3,4)> (Выдать ранг хелперу)"
+            - "&a[>>] &f/hwarn <player> <value_warn> (Выдать warn хелперу)"
+#=========#===========#
+    Question:
+        Format: "&6&l[НОВЫЙ ВОПРОС] &fВопрос: %question% &8|| &fИгрок: %player% "
+        PlayerHaveQuestion: "&cВы уже имеете активный вопрос!"
+        PlayerNotHaveQuestion: "&cИгрок &6%player% &cне имеет вопроса!"
+#=========#===========#
+    Helper:
+        PlayerSetWarn: "&cАдминистратор &6%player% &cустановил вам кол-во предупреждений на &f%warn%&c!"
+        SetWarn: "&aВы успешно установили хелперу &6%player% предупреждения в количестве&c (%value%)"
+        RankEmpty: "&cРанга '%rank%' не существует!"
+        SetRank: "&aВы установили хелперу &6%player%&a ранг %status%"
+        NotHelper: "&cВы не являетесь хелпером!"
+        TakeOffHelper: "&cВы сняли игрока&6 %player%&c с поста хелпера!"
+        PlayerHaveMute: "&cИгрок &6%player%&c уже имеет мут!"
+        PlayerAddMute: "&aВы успешно замутили игрока &6%player%&a на &c%time% sec"
+        HelpersNull: "&cНа сервере нет активных хелперов!"
+        MessageEmpty: "&cВаше сообщение не может быть пустым"
+        ShortMessage: "&cВаше сообщение короче минимального значения &c%min_size%!"
+#=========#===========#
+    BlackList:
+        PlayerInBlackList: "&cИгрок &6%player% &cуже находится в черном списке!"
+        PlayerNotBlackList: "&cИгрок &6%player%&c не найден в черном списке!"
+        InfoPlayerAddBlacklist: "&cАдминистратор &6%player%&c добавил вас в ЧС по причине: &f%reason%"
+        InfoPlayerRemoveBlacklist: "&aАдминистратор &6%player% &aудалил вас из ЧС!"
+        AddBlacklistPlayer: "&aВы добавили игрока &6%player%&a в ЧС по причине: &f%reason%"
+        RemoveBlacklistPlayer: "&aВы удалили игрока &6%player% &aиз ЧС!"
+#=========#===========#
+    PlayerIsEmpty: "&cИгрока &6%player% &cнет на сервере!"
+    AutoTakeOffMute: "&aВремя вашего мута истекло!&f Не нарушайте правила &d<3"
+    NotHavePermission: "&cУ вас нет прав для данного действия!"
+#=========#===========#
