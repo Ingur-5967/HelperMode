@@ -21,7 +21,6 @@ public class ClickInventory implements Listener {
 
     @Getter private final Main plugin;
 
-    private final MenuHandler menus = new MenuHandler();
     private final Users users = new Users(Main.getInstance());
 
     public ClickInventory(Main plugin) throws SQLException, ClassNotFoundException {
@@ -41,7 +40,6 @@ public class ClickInventory implements Listener {
                 case 12 : {
                     users.setValueLikeGradesPlayer(p.getName(), users.getValueLikeGradesPlayer(getHelper().getName()) + 1);
                     getHelper().sendMessage(translateAlternateColorCodes('&', "&e&l[*] &fИгрок &6" + p.getName() + "&f поставил вам &aхороший&f отзыв!"));
-                    menus.menu.remove(p);
                     p.closeInventory();
                     return;
                 }
@@ -49,11 +47,9 @@ public class ClickInventory implements Listener {
                 case 14 : {
                     users.setValueDisLikeGradesPlayer(p.getName(), users.getValueDisLikeGradesPlayer(getHelper().getName()) + 1);
                     getHelper().sendMessage(translateAlternateColorCodes('&', "&e&l[*] &fИгрок &6" + p.getName() + "&f поставил вам &4плохой&f отзыв!"));
-                    menus.menu.remove(p);
                     p.closeInventory();
                 }
             }
         }
-        if(menus.menu.contains(p.getPlayer())) p.openInventory(getInventory());
     }
 }
