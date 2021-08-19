@@ -21,8 +21,6 @@ public class MenuHandler {
     @Getter private Player user;
     @Getter private int slot;
 
-    public static final HashSet<Player> menu = new HashSet<>();
-
     private static final ItemStack LIKE = new ItemStack(Material.WOOL, 1, (byte) 5);
     private static final ItemStack DISLIKE = new ItemStack(Material.WOOL, 1, (byte) 14);
     private static final ItemStack DEFAULT_ITEM = new ItemStack(Material.STAINED_GLASS_PANE, 1, (byte) 7);
@@ -39,7 +37,6 @@ public class MenuHandler {
     public void createInventory(Player p) {
         if(inventory == null) inventory = Bukkit.createInventory(null, slot, "Оцените ответ хелпера");
         openInventory();
-        menu.add(p);
     }
 
     public void openInventory() {
