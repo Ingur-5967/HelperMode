@@ -39,6 +39,7 @@ public class Answer {
 
         if(Objects.equals(user.getName(), helper.getName())) {
             helper.sendMessage(translateAlternateColorCodes('&', "&cНельзя отвечать на свои вопросы!"));
+            return;
         }
 
         for(Player name : onlineHelpers) {
