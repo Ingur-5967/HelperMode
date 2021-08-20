@@ -13,7 +13,6 @@ public class HandlerRequests {
     @Getter @Setter public int rsInt;
     @Getter @Setter public String rsString;
     @Getter @Setter public boolean rsBoolean;
-    @Getter @Setter public Date rsDate;
 
     public void updateRequest(Connection connect, String db, String object, String name,
                               RequestsType requests, int integer, boolean bool, String string) throws SQLException {
