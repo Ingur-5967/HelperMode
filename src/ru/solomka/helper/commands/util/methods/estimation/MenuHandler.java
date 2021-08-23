@@ -48,7 +48,7 @@ public class MenuHandler {
         user.openInventory(getInventory());
     }
 
-    public static void setItemInv(ItemStack item, int startSlot, int finalSlot) {
+    public void setItemInv(ItemStack item, int startSlot, int finalSlot) {
         for (int i = startSlot; i < finalSlot; i++) {
             if (inventory.getItem(i) != null) {
                 i++;
